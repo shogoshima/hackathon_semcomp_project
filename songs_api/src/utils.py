@@ -9,17 +9,35 @@ def co_command(model='command', prompt='', co : cohere.Client = None):
         return 
     
     response = co.generate(
-    model=f'{model}',
-    prompt=f'{prompt}',
-    max_tokens=716,
-    temperature=0.9,
-    k=0,
-    stop_sequences=[],
-    return_likelihoods='NONE')
+        model=f'{model}',
+        prompt=f'{prompt}',
+        max_tokens=716,
+        temperature=0.9,
+        k=0,
+        stop_sequences=[],
+        return_likelihoods='NONE')
 
     # string = response.generations[0].text
     return response
 
+def co_chat(model='command', prompt='', historic =[{}], co : cohere.Client = None):
+    if co == None:
+        print("Error - Cohere client not defined.")
+        return 
+
+    response = co.chat( 
+        model=f'{model}',
+        message=f'{prompt}',
+        temperature=0.3,
+        # chat_history=historic,
+
+
+        # citation_quality='accurate',
+        connectors=[{"id":"web-search"}],
+        # documents=[] 
+        ) 
+
+    return response
 
 
 def get_song_array_old(response : str, debug = False):
