@@ -1,4 +1,5 @@
 import cohere 
+import datetime
 
 # TODO put on virtual env
 key='iWNVMw1SXjZq432vO6wjwMx4q3WZUKrGTrZtTXBl'
@@ -133,8 +134,4 @@ def get_song_array(response : str, debug = False):
         return False
 
     return final
-
-
-# print('\nOriginal Response of text generator: \n{}'.format(string))
-# print(f"\nFormatted output: {get_song_array(string, debug=True)}" )
 

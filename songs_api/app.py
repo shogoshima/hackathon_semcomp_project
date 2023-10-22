@@ -11,7 +11,7 @@ global_cohere_client = cohere.Client(key)
 playlist_request_content = ["description", "daytime", "importancy", "intention", "duration", "duration", "audience", "local"]
 
 """POST request body on event_feedback"""
-event_feedback_post_content = ["review", "comment", "event_id", "status"]
+event_feedback_post_content = ["review", "comment", "event_id", "status", "time_sent"]
 
 app = Flask(__name__)
 CORS(app) # allows different origins requisitions

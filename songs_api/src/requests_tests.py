@@ -1,6 +1,7 @@
-import requests
-
-data = {
+import requests, time
+import datetime
+# GET examples
+data_get = {
     
     "description": "a hackathon event with undergraduate students",
     "daytime": "night",
@@ -17,6 +18,25 @@ headers  = {
     "Access-Control-Allow-Headers" : "Origin, X-Requested-With, Content-Type, Accept"
 }
 
-resp = requests.get("http://127.0.0.1:5000/get_playlist", params=data, headers=headers)
+# POST examples
+data_post = {
+    "review" : "like",
+    "comment" : "im loving",
+    "event_id" : "10092",
+    "status" : "during",
+    "time_sent" : f"{datetime.datetime.now()}"
+}
+
+request = 'POST'
+resp = ''
+
+if request == 'GET':
+    print(f'GET data: \n{data_get}')
+    resp = requests.get("http://127.0.0.1:5000/get_playlist", params=data_get, headers=headers)
+
+
+elif request == 'POST' :
+    print(f'POST data: \n{data_post}')
+    resp = requests.post("http://127.0.0.1:5000/event_feedback", params=data_post, headers=headers)
 
 print(resp.json())
