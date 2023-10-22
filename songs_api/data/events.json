@@ -5,25 +5,13 @@
                 "like on show 2",
                 "i dont know",
                 "during",
-                "2023-10-22 02:08:40.744666"
+                "10/22/2023, 02:40:01"
             ],
             [
                 "dislike on show 2",
                 "i dont know",
                 "during",
-                "2023-10-22 02:08:40.744670"
-            ],
-            [
-                "like on show 2",
-                "i dont know",
-                "during",
-                "2023-10-22 02:08:57.439663"
-            ],
-            [
-                "dislike on show 2",
-                "i dont know",
-                "during",
-                "2023-10-22 02:08:57.439668"
+                "10/22/2023, 02:40:01"
             ]
         ],
         "3": [
@@ -31,13 +19,7 @@
                 " like on new show 3",
                 "i dont know",
                 "during",
-                "2023-10-22 02:08:40.744670"
-            ],
-            [
-                " like on new show 3",
-                "i dont know",
-                "during",
-                "2023-10-22 02:08:57.439668"
+                "10/22/2023, 02:40:01"
             ]
         ]
     }

@@ -24,7 +24,7 @@ data_post = {
     "comment" : "im loving",
     "event_id" : "10092",
     "status" : "during",
-    "time_sent" : f"{datetime.datetime.now()}"
+    "time_sent" : datetime.datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
 }
 
 request = 'POST'

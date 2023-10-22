@@ -80,13 +80,13 @@ def get_feedback_data_by_event(event_id : str):
         print(f"Error opening file '{path_to_save}/events.json'. Please check if it does not exist.. {err}") 
 
     
-
+# date = datetime.datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
 # feedback0 = [{
 #     "review" : "like on show 2",
 #     "comment" : "i dont know" ,
 #     "event_id" : 2,
 #     "status" : "during",
-#     "time_sent" : datetime.datetime.now()
+#     "time_sent" : date
 # },
 
 #  {
@@ -94,7 +94,7 @@ def get_feedback_data_by_event(event_id : str):
 #     "comment" : "i dont know" ,
 #     "event_id" : 2,
 #     "status" : "during",
-#     "time_sent" : datetime.datetime.now()
+#     "time_sent" : date
 # },
 
 #  {
@@ -102,8 +102,9 @@ def get_feedback_data_by_event(event_id : str):
 #     "comment" : "i dont know" ,
 #     "event_id" : 3,
 #     "status" : "during",
-#     "time_sent" : datetime.datetime.now()
+#     "time_sent" : date
 # }]
 
 # for feedback in feedback0:
 #     save_feedback(feedback=feedback)
+# print(get_feedback_data_by_event(2))
