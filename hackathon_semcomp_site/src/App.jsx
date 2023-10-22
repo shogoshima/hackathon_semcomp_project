@@ -1,9 +1,18 @@
 import RoutesPage from './Routes'
+import { useEffect } from 'react';
 import './App.css'
 
 function App() {
+  useEffect(() => {
+    let data = localStorage.getItem('gotemham')
+    if (!data) {
+      localStorage.setItem('gotemham', JSON.stringify({ list: [] }))
+    }
+  }, []);
   return (
-    <RoutesPage />
+    <div className='bg-[#F5F5FA] h-screen w-full'>
+      <RoutesPage/>
+    </div>
   )
 }
 

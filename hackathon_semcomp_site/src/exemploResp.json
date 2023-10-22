@@ -1,0 +1,52 @@
+{
+    "gender": "generic gender to fullfill this filed",
+    "generatedPrompt": "Give me a list of 10 songs and artists to be played on a event that match the following: It is a a hackathon event with undergraduate students happening during night, and the music has medium significancy to make the student focus and leave the environment enjoyable for a time around long. Also, the target audience is young on a local like a laboratory. Please, dont send any more text than the format like: \nName: \"Song Name\"; Author: Author Name.\n",
+    "references": [
+        "a",
+        "bunch",
+        "of",
+        "links.here"
+    ],
+    "songs": [
+        [
+            "Lose Yourself",
+            "Eminem"
+        ],
+        [
+            "Beat It",
+            "Michael Jackson"
+        ],
+        [
+            "Rock You Like a Hurricane",
+            "Scorpions"
+        ],
+        [
+            "Caramelo",
+            "Karol G, Myke Towers, Los Ángeles Azules, Sía"
+        ],
+        [
+            "Pirates of the Sea",
+            "Boney M."
+        ],
+        [
+            "Iron",
+            "Woodkid"
+        ],
+        [
+            "Skyfall",
+            "Adele"
+        ],
+        [
+            "Pressure",
+            "Martin Garrix and Tove Lo"
+        ],
+        [
+            "Rap God",
+            "Eminem"
+        ],
+        [
+            "Break My Soul",
+            "Beyoncé"
+        ]
+    ]
+}
