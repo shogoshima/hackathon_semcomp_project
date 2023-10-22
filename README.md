@@ -19,6 +19,21 @@ The host just have to fill the forms with a few specifications regarding the eve
 Developed by:
 
 - [José Carlos Andrade do Nascimento](https://www.linkedin.com/in/jos%C3%A9-carlos-andrade-do-nascimento-71186421a/)
-- [Shogo Shima]()
-- [Gabriel Barbosa dos Santos]()
-- [Thiago Zero Araujo]()
+- [Shogo Shima](https://www.linkedin.com/in/shogo-shima-36022a212/)
+- [Gabriel Barbosa dos Santos](https://github.com/GotemBarbosa/)
+- [Thiago Zero Araujo](https://github.com/thzero0)
+
+---
+## Tecnologies 
+to develop this project REACT with TAILWIND was choose to create the interface, using Vite to allow a better development processes and a faster program.
+
+## How to deploy project?
+1. clone this repository
+2. with node installed, run this code to download the dependencies 
+```bash
+npm install 
+```
+3. run this code to open a local server with the project
+```bash
+npm run dev
+```
