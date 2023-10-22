@@ -53,7 +53,7 @@ def save_feedback(feedback) -> bool:
             return False
 
     except Exception as err:
-        print(f"Bad save parameter: {err}")
+        print(f"Bad save parameters: {err}")
         return False
     
 

@@ -27,7 +27,12 @@ data_post = {
     "time_sent" : datetime.datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
 }
 
-request = 'POST'
+feedback_get = {
+    "event_id" : "2"
+
+}
+
+request = 'GET FEEDBACK'
 resp = ''
 
 if request == 'GET':
@@ -38,5 +43,10 @@ if request == 'GET':
 elif request == 'POST' :
     print(f'POST data: \n{data_post}')
     resp = requests.post("http://127.0.0.1:5000/event_feedback", params=data_post, headers=headers)
+
+elif request == 'GET FEEDBACK':
+    print(f'GET data: \n{feedback_get}')
+    resp = requests.get("http://127.0.0.1:5000/event_feedback", params=feedback_get, headers=headers)
+
 
 print(resp.json())

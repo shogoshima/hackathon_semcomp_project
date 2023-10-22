@@ -3,6 +3,7 @@ from flask_cors import CORS
 import json
 
 from src.utils import *
+from backend_src import *
 
 """Initializing cohere client"""
 global_cohere_client = cohere.Client(key)
@@ -102,18 +103,32 @@ def event_feedback():
 
     """
     if request.method == 'GET':
-        return jsonify({"status" : "ok"}), 200
+        if "event_id" not in request.args:
+            return jsonify({"status" : "Invalid request body"}), 400
+        
+        event_id = request.args.get('event_id')
+        data = get_feedback_data_by_event(event_id=event_id)
+        if data:
+            return jsonify({"feedbacks" : data})
+        else:
+            return jsonify({"feedbacks" : []} )
+        # return jsonify({"status" : "ok"}), 200
         
     elif request.method == 'POST':
         # posting information on event feedback
 
-        for content in request.data: # checking request body
+        for content in request.args: # checking request body
             if content not in event_feedback_post_content:
                 return jsonify({"error" : "Bad request body. Invalid parameters"}), 400 # bad request
         
         # saving data
+        print(request.args)
+        if save_feedback(request.args):
         
-        pass
+            return jsonify({"status" : "ok"}), 200
+    
+        else:
+            return jsonify({"status" : "error"}), 500
 
     else:
         return jsonify({"error" : "Invalid request method"}), 400
