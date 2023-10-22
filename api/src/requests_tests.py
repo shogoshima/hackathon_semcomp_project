@@ -32,7 +32,7 @@ feedback_get = {
 
 }
 
-request = 'GET FEEDBACK'
+request = 'GET'
 resp = ''
 
 if request == 'GET':

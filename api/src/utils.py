@@ -1,8 +1,8 @@
-import cohere 
+import cohere , os
 import datetime
 
 # TODO put on virtual env
-key='iWNVMw1SXjZq432vO6wjwMx4q3WZUKrGTrZtTXBl'
+key = os.getenv('COHERE_KEY')
 
 def co_command(model='command', prompt='', co : cohere.Client = None):
     if co == None:
